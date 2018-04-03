@@ -25,14 +25,18 @@
         <div class="content-wrapper">
             <h2>Introduction</h2>
             <p>
-                Provide a general description of your APIs here.
+                SiteContent contains a single text field, date created and date modified.
             </p>
         </div>
     </section>
     <section class="content-wrapper main-content clear-fix">
         @foreach (var group in apiGroups)
         {
-            @Html.DisplayFor(m => group, "ApiGroup")
+            if (group.Key.ControllerName == "SiteContent")
+            {
+                @Html.DisplayFor(m => group, "ApiGroup")
+            }
+            
         }
     </section>
 </div>
