@@ -32,10 +32,12 @@
     <section class="content-wrapper main-content clear-fix">
         @foreach (var group in apiGroups)
         {
-            if (group.Key.ControllerName == "SiteContent")
+            @*if (group.Key.ControllerName == "SiteContent")
             {
                 @Html.DisplayFor(m => group, "ApiGroup")
-            }
+            }*@
+
+            @Html.DisplayFor(m => group, "ApiGroup")
             
         }
     </section>
